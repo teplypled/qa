@@ -1,4 +1,3 @@
-// and anothjer onre commit
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -13,7 +12,8 @@ import java.util.ArrayList;
  * @author Maryna
  */
 
-//Another one change
+//test branch comment
+
 public class Groups {
     private String name;
     private ArrayList<Student> groups = new ArrayList<>();
