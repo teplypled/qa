@@ -12,6 +12,8 @@ import java.util.ArrayList;
  *
  * @author Maryna
  */
+
+//Another one change
 public class Groups {
     private String name;
     private ArrayList<Student> groups = new ArrayList<>();

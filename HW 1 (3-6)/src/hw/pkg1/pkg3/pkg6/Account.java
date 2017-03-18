@@ -57,6 +57,8 @@ public class Account {
 }
 * */
 
+// new comment for testing git
+
 // нижче - завдання написане в класі
     public class Account {
         private String name; //поле потому что написано не в методе а в классе
