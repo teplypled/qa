@@ -6,6 +6,7 @@
 package hw.pkg1.pkg3.pkg6;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  *
@@ -21,7 +22,10 @@ public class LessonsList{
     public  void removeLesson (Lessons Lessons){
         lessons.remove(Lessons);
     }
-    
+    public int size()
+    {
+        return lessons.size();
+    }
     public  ArrayList<Lessons> getLessons(){
         return lessons;
     }

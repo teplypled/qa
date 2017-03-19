@@ -61,11 +61,12 @@ public class ShowOurWorkBySide {
        public static LessonsList getOneDayLesson(Date date){
         LessonsList lessons = new LessonsList(); // создаваемый список уроков на 1 день
         
-        if (date.getDay() == 0 || date.getDay() == 6){// 6 - cуббота, 0 - воскресенье
+        if (date.getDay() == 0 || date.getDay() == 6){// 6 - cубота, 0 - неділя
             return lessons;
         }
         
         ArrayList<String> lessonsNames = Lessons.getLessonsNames();//список названий уроков
+        System.out.println(lessonsNames + "AAAAAAAAAAAAAAAAAA");
         int lessonPointer = 0;
         for (int i = 0; i < LessonsList.quantityLessonsOnDay(); i++){
              Lessons oneDayLessons = new Lessons();
@@ -146,10 +147,21 @@ public class ShowOurWorkBySide {
             System.out.println(student.getLogin());
             }
         }
-    }
-            LessonsList oneDayLessons = getOneDayLesson(new Date(117, 3, 20)); //Список елементів типу <Lessons> (описані в класі Lessons)
+      
+        
+        LessonsList daySchedule = getOneDayLesson(new Date(117, 3, 20)); 
+            for (int i = 0; i < daySchedule.size(); i++){
+                
+                System.out.println(daySchedule.getLessons().toArray()[i]);
+//                System.out.println(oneDayLessons.);
+//                System.out.println(oneDayLessons.);
+//                System.out.println(oneDayLessons.);
+            }
+            
+    }        
+        
 
-            LessonsList oneWeekLessons = getOneWeekLesson(new Date(117, 3, 19));
+        //    LessonsList oneWeekLessons = getOneWeekLesson(new Date(117, 3, 19));
             
             
 }

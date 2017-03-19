@@ -22,8 +22,18 @@ public class Lessons {
     
     public static ArrayList<String> getLessonsNames() {// метод, що повертає назви предметів
         ArrayList<String> ret = new ArrayList<>();
-        ret.add("Mathemetics");
+        ret.add("Algebra");
         ret.add("Physics");
+        ret.add("Geometry"); 
+        ret.add("Discrete mathematics");
+        ret.add("Statistics");
+        ret.add("Graphics");
+        ret.add("Computer science");
+        ret.add("History");
+        ret.add("History og Arts");
+        ret.add("English");
+        
+        
         
         return ret;
     }
