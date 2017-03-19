@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author Maryna
  */
-public class LessonsList {
+public class LessonsList{
     public ArrayList<Lessons> lessons = new ArrayList<>();
     
     public  void addLesson (Lessons Lessons){
@@ -25,4 +25,14 @@ public class LessonsList {
     public  ArrayList<Lessons> getLessons(){
         return lessons;
     }
+    
+    public static int quantityLessonsOnDay (){
+        int quantityLessons = 4 + (int)(Math.random() * (8 - 4));
+        return quantityLessons;
+    }
+      
+   /* public static void main(String[] args){
+        System.out.println(quantityLessonsOnDay());
+    }
+*/
 }

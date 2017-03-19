@@ -5,6 +5,8 @@
  */
 package hw.pkg1.pkg3.pkg6;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Maryna
@@ -16,7 +18,16 @@ public class Lessons {
     private Teacher teacher;
     private long startOfLesson;
     private long lengthOfLesson;
-
+    
+    
+    public static ArrayList<String> getLessonsNames() {// метод, що повертає назви предметів
+        ArrayList<String> ret = new ArrayList<>();
+        ret.add("Mathemetics");
+        ret.add("Physics");
+        
+        return ret;
+    }
+    
     public String getLessonSubject() {
         return lessonSubject;
     }
@@ -55,8 +66,5 @@ public class Lessons {
 
     public void setLengthOfLesson(long lengthOfLesson) {
         this.lengthOfLesson = lengthOfLesson;
-    }
-    
-    
-    
+    } 
 }

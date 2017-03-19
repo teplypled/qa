@@ -6,6 +6,7 @@
 package hw.pkg1.pkg3.pkg6;
 
 import java.util.Random;
+import java.util.Arrays;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -89,7 +90,7 @@ public class HW136Test {
     public void getRandomMail2Test3(){
         String domainForMail = HW136.getRandomMail2();
         String [] domain = {"ukr.net", "gmail.com", "meta.ua", "address.com", "yahoo.com"};
-        System.out.println(domainForMail);
+            System.out.println(domainForMail);
         boolean c = false;
         for (int i = 0; i < domain.length; i++){
             if (domainForMail == domain[i]){
@@ -99,6 +100,37 @@ public class HW136Test {
         assertEquals(true, c);
     }
     
+    @Test
+    public void getRandomStringTest(){
+        char[] sym = "abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
+
+        char[]  testString = HW136.getRandomString().toCharArray();
+            System.out.println(testString);
+        boolean c = true;
+        
+        for (int j = 0; j < testString.length; j++){
+            boolean check = false;
+            for (int i = 0; i < sym.length; i++){
+                if (testString[j] == sym[i]){
+                    check = true;                    
+                }
+            }
+            if (check == false) { 
+                //System.out.print(" " + testString[j]);
+                c = false;
+            } else
+            { System.out.println(testString[j]); }             
+        }
+        assertEquals(true, c);
+    }
+    
+    @Test
+    public void getRandomStringTest2(){
+        //char [] symbols = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+//'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+    }
+  
+   
 }     
 
 //assertTrue(java.utils.Arrays.asList(domain).indexOf(domainForMail) > 0);

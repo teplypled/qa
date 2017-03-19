@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="Marina-Book" name="hw.pkg1.pkg3.pkg6.HW136Test" skipped="0" tests="6" time="0.088" timestamp="2017-03-15T18:42:02">
+<testsuite errors="0" failures="0" hostname="Marina-Book" name="hw.pkg1.pkg3.pkg6.HW136Test" skipped="0" tests="7" time="0.053" timestamp="2017-03-19T14:10:29">
   <properties>
     <property name="netbeans.autoupdate.country" value="US" />
     <property name="nb.wait.for.caches" value="true" />
@@ -38,7 +38,7 @@
     <property name="user.name" value="Maryna" />
     <property name="copylibs.rebase" value="true" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner hw.pkg1.pkg3.pkg6.HW136Test skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Maryna\Documents\NetBeansProjects\HW 1 (3-6)\build\test\results\TEST-hw.pkg1.pkg3.pkg6.HW136Test.xml crashfile=C:\Users\Maryna\Documents\NetBeansProjects\HW 1 (3-6)\build\junitvmwatcher8229290381277883744.properties propsfile=C:\Users\Maryna\Documents\NetBeansProjects\HW 1 (3-6)\build\junit8935531989084873987.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner hw.pkg1.pkg3.pkg6.HW136Test skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Maryna\Documents\NetBeansProjects\HW 1 (3-6)\build\test\results\TEST-hw.pkg1.pkg3.pkg6.HW136Test.xml crashfile=C:\Users\Maryna\Documents\NetBeansProjects\HW 1 (3-6)\build\junitvmwatcher1885202592251507483.properties propsfile=C:\Users\Maryna\Documents\NetBeansProjects\HW 1 (3-6)\build\junit6599631140754715813.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -85,7 +85,7 @@
     <property name="libs.testng.classpath" value="C:\Program Files\NetBeans 8.2\platform\modules\ext\testng-6.8.1-dist.jar" />
     <property name="libs.absolutelayout.maven-pom" value="" />
     <property name="ant.java.version" value="1.8" />
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_121\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Brackets\command;C:\Users\Maryna\AppData\Local\Microsoft\WindowsApps;;." />
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_121\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Brackets\command;C:\Program Files\Git\cmd;C:\Users\Maryna\AppData\Local\Microsoft\WindowsApps;;." />
     <property name="javadoc.author" value="false" />
     <property name="java.util.logging.config.class" value="org.netbeans.core.startup.TopLogging" />
     <property name="ant.file.type.HW_136" value="file" />
@@ -310,14 +310,31 @@
     <property name="platform.active" value="default_platform" />
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
   </properties>
-  <testcase classname="hw.pkg1.pkg3.pkg6.HW136Test" name="gettingStringTest" time="0.0" />
+  <testcase classname="hw.pkg1.pkg3.pkg6.HW136Test" name="gettingStringTest" time="0.016" />
   <testcase classname="hw.pkg1.pkg3.pkg6.HW136Test" name="getRandomMail2Test" time="0.0" />
-  <testcase classname="hw.pkg1.pkg3.pkg6.HW136Test" name="test" time="0.0" />
   <testcase classname="hw.pkg1.pkg3.pkg6.HW136Test" name="getRandomMail2Test2" time="0.0" />
   <testcase classname="hw.pkg1.pkg3.pkg6.HW136Test" name="getRandomMail2Test3" time="0.0" />
   <testcase classname="hw.pkg1.pkg3.pkg6.HW136Test" name="gettingStringTest2" time="0.0" />
-  <system-out><![CDATA[QjODQnFcyj
-meta.ua
+  <testcase classname="hw.pkg1.pkg3.pkg6.HW136Test" name="getRandomStringTest" time="0.0" />
+  <testcase classname="hw.pkg1.pkg3.pkg6.HW136Test" name="getRandomStringTest2" time="0.0" />
+  <system-out><![CDATA[ukr.net
+SKqDHqXhckWvNWaH
+S
+K
+q
+D
+H
+q
+X
+h
+c
+k
+W
+v
+N
+W
+a
+H
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
