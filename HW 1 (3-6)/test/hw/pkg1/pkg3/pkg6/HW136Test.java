@@ -123,7 +123,83 @@ public class HW136Test {
         }
         assertEquals(true, c);
     }
-   
+    
+    @Test
+    public void getRandomNumberTest(){
+        int randomNumber = new HW136().getRandomNumber(0, 2);
+        boolean numberIsCorrect = false;
+        numberIsCorrect = (randomNumber >= 0 && randomNumber <= 2); //randomNumber == 2;
+        assertEquals(true, numberIsCorrect);
+        
+    }
+    
+    @ Test
+    public void getRandomAccEmailTest(){
+        String rndStr = new HW136().getRandomString(); 
+        String someEmail = new HW136().getRandomAccEmail(rndStr);
+        boolean accInEmail = someEmail.contains(rndStr);
+        
+        assertEquals(true, accInEmail);
+    }
+    
+    @ Test
+    public void getRandomAccEmailForContainsAtTest(){
+        int count = 0;
+        String rndStr = new HW136().getRandomString(); 
+        String someEmail = new HW136().getRandomAccEmail(rndStr);
+        char[] symbols = someEmail.toCharArray();
+        for(int i = 0; i < symbols.length; i++) {
+            if (symbols[i] == '@'){
+                count++;
+            }
+        }
+        
+        assertEquals(1, count);
+    }
+    
+    @ Test
+    public void getRandomAccEmailForContainDotTest(){
+        int count = 0;
+        String rndStr = new HW136().getRandomString(); 
+        String someEmail = new HW136().getRandomAccEmail(rndStr);
+        char[] symbols = someEmail.toCharArray();
+        for(int i = 0; i < symbols.length; i++) {
+            if (symbols[i] == '.'){
+                count++;
+            }
+        }
+        
+        assertEquals(1, count);
+    }
+    @ Test
+    public void getRandomAccEmailForDotAfterATTest(){
+        int count = 0;
+        String rndStr = new HW136().getRandomString(); 
+        String someEmail = new HW136().getRandomAccEmail(rndStr);
+        char[] symbols = someEmail.toCharArray();
+        boolean isTrue = false;
+        int indexAt = 0;
+        int indexDot = 0;
+        
+        for(int i = 0; i < symbols.length; i++) {
+            if (symbols[i] == '@'){
+                indexAt = i;
+            }
+            if (symbols[i] == '.'){
+                indexDot = i;
+            }
+            isTrue = indexAt < indexDot; 
+        }
+        
+        assertEquals(true, isTrue);
+    }
+    
+   /*
+    public static int getRandomNumber(int min, int max){
+        int  randomNumber = (int) (min + Math.random()* (max - min));
+        return randomNumber;
+    }   
+    */
 }     
 
 //assertTrue(java.utils.Arrays.asList(domain).indexOf(domainForMail) > 0);

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="Marina-Book" name="hw.pkg1.pkg3.pkg6.HW136Test" skipped="0" tests="7" time="0.053" timestamp="2017-03-19T14:10:29">
+<testsuite errors="0" failures="0" hostname="Marina-Book" name="hw.pkg1.pkg3.pkg6.HW136Test" skipped="0" tests="11" time="0.084" timestamp="2017-03-20T19:01:14">
   <properties>
     <property name="netbeans.autoupdate.country" value="US" />
     <property name="nb.wait.for.caches" value="true" />
@@ -38,7 +38,7 @@
     <property name="user.name" value="Maryna" />
     <property name="copylibs.rebase" value="true" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner hw.pkg1.pkg3.pkg6.HW136Test skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Maryna\Documents\NetBeansProjects\HW 1 (3-6)\build\test\results\TEST-hw.pkg1.pkg3.pkg6.HW136Test.xml crashfile=C:\Users\Maryna\Documents\NetBeansProjects\HW 1 (3-6)\build\junitvmwatcher1885202592251507483.properties propsfile=C:\Users\Maryna\Documents\NetBeansProjects\HW 1 (3-6)\build\junit6599631140754715813.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner hw.pkg1.pkg3.pkg6.HW136Test skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Maryna\Documents\NetBeansProjects\HW 1 (3-6)\build\test\results\TEST-hw.pkg1.pkg3.pkg6.HW136Test.xml crashfile=C:\Users\Maryna\Documents\NetBeansProjects\HW 1 (3-6)\build\junitvmwatcher2718975278933566619.properties propsfile=C:\Users\Maryna\Documents\NetBeansProjects\HW 1 (3-6)\build\junit6550160579548841277.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -311,30 +311,31 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
   </properties>
   <testcase classname="hw.pkg1.pkg3.pkg6.HW136Test" name="gettingStringTest" time="0.016" />
+  <testcase classname="hw.pkg1.pkg3.pkg6.HW136Test" name="getRandomAccEmailTest" time="0.0" />
+  <testcase classname="hw.pkg1.pkg3.pkg6.HW136Test" name="getRandomAccEmailForContainDotTest" time="0.0" />
+  <testcase classname="hw.pkg1.pkg3.pkg6.HW136Test" name="getRandomAccEmailForDotAfterATTest" time="0.0" />
   <testcase classname="hw.pkg1.pkg3.pkg6.HW136Test" name="getRandomMail2Test" time="0.0" />
   <testcase classname="hw.pkg1.pkg3.pkg6.HW136Test" name="getRandomMail2Test2" time="0.0" />
   <testcase classname="hw.pkg1.pkg3.pkg6.HW136Test" name="getRandomMail2Test3" time="0.0" />
   <testcase classname="hw.pkg1.pkg3.pkg6.HW136Test" name="gettingStringTest2" time="0.0" />
+  <testcase classname="hw.pkg1.pkg3.pkg6.HW136Test" name="getRandomAccEmailForContainsAtTest" time="0.0" />
   <testcase classname="hw.pkg1.pkg3.pkg6.HW136Test" name="getRandomStringTest" time="0.0" />
-  <testcase classname="hw.pkg1.pkg3.pkg6.HW136Test" name="getRandomStringTest2" time="0.0" />
-  <system-out><![CDATA[ukr.net
-SKqDHqXhckWvNWaH
-S
-K
-q
-D
-H
-q
-X
-h
-c
-k
+  <testcase classname="hw.pkg1.pkg3.pkg6.HW136Test" name="getRandomNumberTest" time="0.0" />
+  <system-out><![CDATA[yahoo.com
+YWgWqZNVJalip
+Y
 W
-v
+g
+W
+q
+Z
 N
-W
+V
+J
 a
-H
+l
+i
+p
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
