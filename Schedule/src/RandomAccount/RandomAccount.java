@@ -33,7 +33,7 @@ public class RandomAccount {
 		names.add("Vlad");
 		names.add("Mark");
 		if(index >= names.size()){
-			index = getRandomNumber(0, (names.size()));
+			index = getRandomNumber(0, (names.size()-1));
 		}
 		name = names.get(index);
 		return name;
