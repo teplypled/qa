@@ -53,17 +53,17 @@ public class ShowOurWorkBySide {
 		GregorianCalendar gc = new GregorianCalendar();
 		gc.setTimeInMillis(dayInMills);
 		int day = gc.get(gc.DAY_OF_WEEK);
-		if(day==7 || day==1){
-			System.out.println("It's a week end!");
-			return correctTime;
-		} else{
+		//if(day==7 || day==1){
+		//	System.out.println("It's a week end!");
+		//	return correctTime;
+		//} else{
 			int dayOfMonth = gc.get(gc.DAY_OF_MONTH);
 			int month = gc.get(gc.MONTH);
 			int year = gc.get(gc.YEAR);
 			GregorianCalendar correctDate = new GregorianCalendar();
 			correctDate.set(year, month, dayOfMonth, 9, 0, 0);
 			correctTime = correctDate.getTimeInMillis();
-		}
+		//}
 		return correctTime;
 	}
 	
@@ -115,7 +115,9 @@ public class ShowOurWorkBySide {
 			
 			// choose group one after other
 			// and set it for lesson
-			for(int i=0; i<getRandomNumber(4,7); i++){
+                        int quantityOfLessons = getRandomNumber(4,7);
+			for(int i=0; i < quantityOfLessons; i++){    // ПОМІНЯЛА!!!! getRendomNumber має визначити кількість уроків 1 раз для 1-го дня для всього цикла, 
+                                                     //а не різну кількість на кожній ітерації
 				Lesson lesson = new Lesson(); 
 				
 				// set teacher from list above
@@ -161,6 +163,7 @@ public class ShowOurWorkBySide {
 		// get lessons for current day
 		ArrayList<Lesson> lessonsForDay = getLessonsForDay(System.currentTimeMillis());
 		// lets check it
+                System.out.println(lessonsForDay.size());
 		for (Lesson lesson : lessonsForDay) {
 			System.out.println(lesson.getLessonSubject());
 			System.out.println(lesson.getTeacher().getLogin());
@@ -173,7 +176,5 @@ public class ShowOurWorkBySide {
 			System.out.println("----------------------------------------------");
 		}
 		
-			
-	}
-
+    }
 }
