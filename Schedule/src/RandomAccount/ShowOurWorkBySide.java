@@ -53,17 +53,17 @@ public class ShowOurWorkBySide {
 		GregorianCalendar gc = new GregorianCalendar();
 		gc.setTimeInMillis(dayInMills);
 		int day = gc.get(gc.DAY_OF_WEEK);
-		//if(day==7 || day==1){
-		//	System.out.println("It's a week end!");
-		//	return correctTime;
-		//} else{
+		if(day==7 || day==1){
+			System.out.println("It's a week end!");
+			return correctTime;
+		} else{
 			int dayOfMonth = gc.get(gc.DAY_OF_MONTH);
 			int month = gc.get(gc.MONTH);
 			int year = gc.get(gc.YEAR);
 			GregorianCalendar correctDate = new GregorianCalendar();
 			correctDate.set(year, month, dayOfMonth, 9, 0, 0);
 			correctTime = correctDate.getTimeInMillis();
-		//}
+		}
 		return correctTime;
 	}
 	
