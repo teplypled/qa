@@ -10,6 +10,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import static org.openqa.grid.common.SeleniumProtocol.WebDriver;
 import org.openqa.selenium.By;
+import static org.openqa.selenium.By.className;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -23,7 +24,8 @@ import org.openqa.selenium.firefox.internal.ProfilesIni;
 public class TestSel {
     
     public static void main(String[] args) throws InterruptedException{
-        regNewAccount();
+       // regNewAccount();
+        getSearchURL();
     }
         
         public static void regNewAccount() throws InterruptedException{ // метод що створює новий аккаунт на амазоні
@@ -125,6 +127,86 @@ public class TestSel {
         return logginedPage;
             
         }
+        
+        // Метод пошуку урла товара на Амазоні в полі пошуку
+        public static  String getSearchURL() throws InterruptedException{ // метод що створює новий аккаунт на амазоні
+            String searchURL = "";
+            System.setProperty("webdriver.gecko.driver", "C:\\selenium\\geckodriver.exe");
+
+        WebDriver webdrAmazon = new FirefoxDriver();
+        webdrAmazon.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS); 
+        webdrAmazon.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS); 
+        
+        webdrAmazon.get("https://www.amazon.com/");
+        
+        WebElement inputField = webdrAmazon.findElement(By.id("twotabsearchtextbox"));
+        inputField.sendKeys("toys");
+        webdrAmazon.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS); 
+        
+        try{
+            Thread.sleep(1000*6);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+            webdrAmazon.quit();
+            getSearchURL();
+        } // зупинка в роботі сторінки на 15 секунд 
+        
+        WebElement searchBtnBlock = webdrAmazon.findElement(By.id("nav-search-submit-text"));
+        
+        searchBtnBlock.click();
+        
+        try{
+            Thread.sleep(1000*5);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+            webdrAmazon.quit();
+            getSearchURL();
+        } // зупинка в роботі сторінки на 5 секунд 
+        
+        String currentURL = webdrAmazon.getCurrentUrl();
+        webdrAmazon.get(currentURL);
+        
+        WebElement nextPageLink = webdrAmazon.findElement(By.id("pagnNextLink"));
+        String nextPageHREF = nextPageLink.getAttribute("href");
+        webdrAmazon.get(nextPageHREF);
+        
+        nextPageLink.click();
+        
+         try{
+            Thread.sleep(1000*6);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+            webdrAmazon.quit();
+            getSearchURL();
+        } // зупинка в роботі сторінки на 5 секунд 
+        
+        currentURL = webdrAmazon.getCurrentUrl();
+        webdrAmazon.get(currentURL);
+        
+         try{
+            Thread.sleep(1000*6);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+            webdrAmazon.quit();
+            getSearchURL();
+        } // зупинка в роботі сторінки на 5 секунд 
+         
+        searchURL = webdrAmazon.getCurrentUrl();
+        
+          try{
+            Thread.sleep(1000*3);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+            webdrAmazon.quit();
+            getSearchURL();
+        } // зупинка в роботі сторінки на 5 секунд 
+        
+        webdrAmazon.quit();
+        
+
+        return searchURL;
+         
+    }
 
     
 }
